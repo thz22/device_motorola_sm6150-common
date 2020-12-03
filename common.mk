@@ -203,6 +203,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Crypto
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
