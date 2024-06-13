@@ -208,7 +208,8 @@ PRODUCT_PACKAGES += \
 # Dependencies
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libutils.vendor
 
 # Display
 PRODUCT_PACKAGES += \
@@ -415,6 +416,8 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     libprotobuf-cpp-full \
     librmnetctl \
+    libsqlite.vendor:64 \
+    libsysutils.vendor:64 \
     libxml2
 
 PRODUCT_PACKAGES += \
@@ -425,7 +428,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.0.vendor
+    android.hardware.secure_element@1.0.vendor \
+    libnetutils.vendor
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
