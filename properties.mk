@@ -188,6 +188,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
+    debug.sf.enable_adpf_cpu_hint=true \
     persist.demo.hdmirotationlock=false \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
