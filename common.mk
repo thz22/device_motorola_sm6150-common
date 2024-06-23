@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     resize2fs_ramdisk
 endif
 
+# OEM
+PRODUCT_PACKAGES += \
+    bin_expat_symlink
+
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
