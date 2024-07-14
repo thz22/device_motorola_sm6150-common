@@ -127,7 +127,9 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libvolumelistener \
     tinymix \
-    libtinycompress
+    libtinycompress \
+    libaudioroute.vendor\
+    libstagefright_softomx_plugin.vendor
 
 ifeq ($(filter %_liber %_parker,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
