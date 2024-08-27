@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -20,18 +20,6 @@ if [ ! -f "${HELPER}" ]; then
     exit 1
 fi
 source "${HELPER}"
-
-function blob_fixup() {
-    case "${1}" in
-    # Fix xml version
-    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
-        sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
-        ;;
-    system_ext/etc/permissions/moto-telephony.xml)
-        sed -i "s|system|system/system_ext|" "${2}"
-        ;;
-    esac
-}
 
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
@@ -56,10 +44,11 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
-        * )
+         *)
                 SRC="${1}"
                 ;;
     esac
@@ -69,6 +58,29 @@ done
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
+
+function blob_fixup() {
+    case "${1}" in
+    # Fix xml version
+     product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+        [ "$2" = "" ] && return 0
+        sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
+        ;;
+     system_ext/etc/permissions/moto-telephony.xml)
+        [ "$2" = "" ] && return 0
+        sed -i "s|system|system/system_ext|" "${2}"
+        ;;
+     *)
+        return 1
+        ;;
+   esac
+
+   return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
+}
 
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
