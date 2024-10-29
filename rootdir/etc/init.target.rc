@@ -179,6 +179,12 @@ service spdaemon /vendor/bin/spdaemon
     user system
     group system
 
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 #service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
 #   user system
 #   group system
