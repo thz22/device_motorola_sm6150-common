@@ -106,6 +106,9 @@ PRODUCT_COPY_FILES += \
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
