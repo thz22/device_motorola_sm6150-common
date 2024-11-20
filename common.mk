@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.bluetooth.audio-impl \
+    audio.primary.default \
     audio.bluetooth.default \
     audio.primary.sm6150 \
     audio.r_submix.default \
