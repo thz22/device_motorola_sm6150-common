@@ -188,15 +188,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.egl.hw=0 \
-    debug.mdpcomp.logs=0 \
-    debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.enable_adpf_cpu_hint=true \
     persist.demo.hdmirotationlock=false \
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.native_mode=1 \
     persist.sys.sf.force_brightness_capability=1 \
+    debug.sf.disable_client_composition_cache=1 \
     ro.opengles.version=196610 \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
     vendor.display.enable_default_color_mode=1 \
@@ -204,7 +202,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=0 \
-    ro.config.avoid_gfx_accel=true
+    ro.config.avoid_gfx_accel=true \
+    arm64.memtag.process.system_server=off \
+    persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false \
+    renderthread.skia.reduceopstasksplitting=true \
+    persist.device_config.activity_manager.use_compaction=true
 
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -282,7 +284,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60
+    ro.vendor.qti.sys.fw.bg_apps_limit=12
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -341,7 +343,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.enable_frame_rate_override=false
+    ro.surface_flinger.clear_slots_with_set_layer_buffer=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1 \
@@ -350,7 +352,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.sf.duration=21000000 \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
+    debug.sf.earlyGl.app.duration=21000000 \
+    debug.sf.enable_transaction_tracing=false \
+    debug.sf.enable_gl_backpressure=0 \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.layer_caching_active_layer_timeout_ms=1000
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
