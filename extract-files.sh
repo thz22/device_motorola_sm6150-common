@@ -70,6 +70,9 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
         sed -i "s|system|system/system_ext|" "${2}"
         ;;
+     vendor/lib64/libwvhidl.so)
+        "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+        ;;
      *)
         return 1
         ;;
