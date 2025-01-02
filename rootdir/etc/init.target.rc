@@ -119,6 +119,8 @@ on boot
     #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
+    write /sys/block/sda/queue/wbt_lat_usec 75000
+
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
