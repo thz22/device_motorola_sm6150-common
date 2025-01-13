@@ -14,18 +14,21 @@
 # limitations under the License.
 #
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_fsg_mountpoint \
+    vendor_super_modem_mountpoint \
+    vendor_super_fsg_mountpoint
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Partitions
-PRODUCT_PACKAGES += \
-    vendor_bt_firmware_mountpoint \
-    vendor_dsp_mountpoint \
-    vendor_firmware_mnt_mountpoint
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
