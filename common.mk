@@ -106,6 +106,10 @@ PRODUCT_COPY_FILES += \
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# ART lowmem config
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.art_lowmem=true
+
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
