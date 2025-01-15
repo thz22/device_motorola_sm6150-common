@@ -1,0 +1,11 @@
+# Bluetooth
+
+
+# GFX
+ro.config.avoid_gfx_accel=true
+
+# Cached app compaction
+persist.device_config.activity_manager.use_compaction=true
+
+# Brightness curve
+persist.sys.brightness.low.gamma=true
