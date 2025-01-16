@@ -403,31 +403,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# NeuralNetworks
+# Media
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor \
-    android.hardware.neuralnetworks@1.2.vendor \
-    android.hardware.neuralnetworks@1.1.vendor \
-    android.hardware.neuralnetworks@1.0.vendor
-
-# OMX
-PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
-    libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxVidcCommon \
-    libstagefrighthw
+    libcodec2_vndk.vendor
 
 # Power
 PRODUCT_PACKAGES += \
