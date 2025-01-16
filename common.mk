@@ -406,7 +406,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.
+    libcodec2_vndk.vendor
     
 # NeuralNetworks
 PRODUCT_PACKAGES += \
