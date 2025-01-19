@@ -42,6 +42,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 # A/B
 AB_OTA_UPDATER := true
 
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0 \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
