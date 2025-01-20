@@ -413,6 +413,12 @@
     <!-- Whether device has turbo power charging support -->
     <bool name="config_hasTurboPowerCharger">true</bool>
 
+        <!-- Integer threshold for low network score, should be somewhat less than the entry threshhold -->
+    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-90</integer>
+
+    <!-- Integer threshold, do not connect to APs with RSSI lower than the entry threshold -->
+    <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
+
     <!-- Any package that has one of the package names defined below will be prevented
        from using specific sensors in order to stop battery drain -->
     <string-array name="config_blockPackagesSensorDrain">
