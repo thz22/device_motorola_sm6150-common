@@ -126,6 +126,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.bluetooth.soc=cherokee
 
+# Blur
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sysui.disableBlur=false
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1
@@ -236,7 +240,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.log.tag.OpenGLRenderer=S
+    persist.log.tag.OpenGLRenderer=S \
+    persist.log.tag.ACDB-LOADER=S
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
