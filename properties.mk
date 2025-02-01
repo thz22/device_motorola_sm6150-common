@@ -178,10 +178,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# FRP
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # GPS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.overlay.izat.optin=rro
@@ -284,7 +280,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=12
+    ro.vendor.qti.sys.fw.bg_apps_limit=11
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
