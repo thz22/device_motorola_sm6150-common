@@ -108,11 +108,6 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
-# Moto Camera 2
-TARGET_MOTCAMERA2 := whitney
-TARGET_USES_MOTCAMERA2 := true
-$(call inherit-product, vendor/motorola/MotCamera2/motcamera2.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
