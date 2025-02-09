@@ -102,12 +102,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
-
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
+
+# Moto Camera 2
+TARGET_MOTCAMERA2 := whitney
+
+$(call inherit-product, vendor/motorola/MotCamera2/motcamera2.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
