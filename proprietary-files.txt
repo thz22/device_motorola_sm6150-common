@@ -67,6 +67,11 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
+vendor/lib64/libmmcamera_cac3.so|5eb2fa6ba5a67080caaf374e37c5da0a590e4f27
+vendor/lib64/libmmcamera_faceproc.so|9f12fe5b6671fbf4183051e201bda21ed7dc5dbe
+vendor/lib64/libmmcamera_faceproc2.so|3a09ebc6d06a140327c7ca7d506e6196bf0ffe60
+vendor/lib64/libmmcamera_lscv35.so|40ada2864612b58f87c55dfab4b44ad48b5be9fb
+vendor/lib64/libmmcamera_mfnr.so|aa52dcd46fd88faf5c77bf4c1d3245fb6a7d7773
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
