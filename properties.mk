@@ -201,12 +201,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ubwc=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_hwc_vds=0 \
-    ro.config.avoid_gfx_accel=true \
-    arm64.memtag.process.system_server=off \
-    persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false \
-    renderthread.skia.reduceopstasksplitting=true \
-    persist.device_config.activity_manager.use_compaction=true
+    debug.sf.enable_hwc_vds=0
 
 # HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
