@@ -262,7 +262,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=8
+    ro.vendor.qti.sys.fw.bservice_limit=10
 
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -285,7 +285,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=11
+    ro.vendor.qti.sys.fw.bg_apps_limit=15
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -355,9 +355,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.enable_transaction_tracing=false \
-    debug.sf.enable_gl_backpressure=0 \
-    debug.sf.disable_backpressure=1 \
-    debug.sf.layer_caching_active_layer_timeout_ms=1000
+    debug.sf.disable_backpressure=1
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
