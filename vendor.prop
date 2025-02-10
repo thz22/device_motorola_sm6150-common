@@ -4,6 +4,9 @@ bluetooth.device.default_name=Moto G⁹ Plus
 # GFX
 ro.config.avoid_gfx_accel=true
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 # Cached app compaction
 persist.device_config.activity_manager.use_compacmtion=true
 
