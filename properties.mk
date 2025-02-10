@@ -126,6 +126,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.bluetooth.soc=cherokee
 
+# Blur
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sysui.disableBlur=false
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1
@@ -177,10 +181,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
-
-# FRP
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # GPS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -240,7 +240,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.log.tag.OpenGLRenderer=S
+    persist.log.tag.OpenGLRenderer=S \
+    persist.log.tag.ACDB-LOADER=S
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -256,6 +257,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Memory optimizations
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.vendor.qti.sys.fw.bservice_age=5000 \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=8
 
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -276,6 +283,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.vendor.qti.sys.fw.bg_apps_limit=11
+
+# Qualcomm System Daemon
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcomsysd.enabled=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
