@@ -128,7 +128,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Blur
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sysui.disableBlur=true
+    persist.sysui.disableBlur=false
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
