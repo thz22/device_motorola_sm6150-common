@@ -48,6 +48,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.audio.hac.enable=false \
     ro.audio.monitorRotation=true
 
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.minidebuginfo=false \
+    dalvik.vm.dex2oat-minidebuginfo=false
+
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.a2dp_offload.enable=true \
     vendor.audio.feature.afe_proxy.enable=true \
