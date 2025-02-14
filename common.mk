@@ -39,6 +39,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
+# Disable OMX Service
+TARGET_SUPPORTS_OMX_SERVICE := false
+
 # A/B
 AB_OTA_UPDATER := true
 
