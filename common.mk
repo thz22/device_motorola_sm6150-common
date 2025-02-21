@@ -272,12 +272,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
-    SystemUIGoogle \    
+    SystemUIGoogle \
     SystemUI \
     Settings
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
+# ART lowmem config
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.art_lowmem=true
 
 # Device ID attestation
 PRODUCT_COPY_FILES += \

@@ -48,11 +48,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.audio.hac.enable=false \
     ro.audio.monitorRotation=true
 
-# ART
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.minidebuginfo=false \
-    dalvik.vm.dex2oat-minidebuginfo=false
-
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.a2dp_offload.enable=true \
     vendor.audio.feature.afe_proxy.enable=true \
@@ -132,8 +127,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.bluetooth.soc=cherokee
 
 # Blur
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sysui.disableBlur=false
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sysui.disableBlur=true \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=0 \
+    ro.surface_flinger.supports_background_blur=0
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,12 +156,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat64.enabled=true \
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heaptargetutilization=0.75
+    dalvik.vm.dex2oat64.enabled=true
 
 # Disable Skia tracing by default
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -240,8 +233,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     av.offload.enable=true \
     ro.media.recorder-max-base-layer-fps=60 \
-    vendor.swvdec.log.level=1 \
-    vendor.vidc.debug.level=1
+    vendor.swvdec.log.level=0 \
+    vendor.vidc.debug.level=0
 
 PRODUCT_PRODUCT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
@@ -343,7 +336,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.enable_transaction_tracing=false \
-    debug.sf.disable_backpressure=1
+    debug.sf.disable_backpressure=1 \
+    debug.sf.layer_caching_active_layer_timeout_ms=1000
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

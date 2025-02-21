@@ -65,16 +65,14 @@ void check_device()
         heaptargetutilization = "0.5";
         heapminfree = "8m";
         heapmaxfree = "32m";
-        SetProperty("ro.config.art_lowmem", "true");
     } else if (sys.totalram > 3072ull * 1024 * 1024) {
         // from - phone-xxhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "256m";
         heapsize = "512m";
-        heaptargetutilization = "0.6";
-        heapminfree = "8m";
+        heaptargetutilization = "0.75";
+        heapminfree = "512k";
         heapmaxfree = "16m";
-        SetProperty("ro.config.art_lowmem", "true");
     } else {
         // from - phone-xhdpi-2048-dalvik-heap.mk
         heapstartsize = "8m";
@@ -83,7 +81,6 @@ void check_device()
         heaptargetutilization = "0.75";
         heapminfree = "512k";
         heapmaxfree = "8m";
-        SetProperty("ro.config.art_lowmem", "true");
     }
 }
 
