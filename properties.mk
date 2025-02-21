@@ -337,6 +337,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.app.duration=21000000 \
     debug.sf.enable_transaction_tracing=false \
     debug.sf.disable_backpressure=1 \
+    debug.sf.enable_gl_backpressure=0 \
     debug.sf.layer_caching_active_layer_timeout_ms=1000
 
 # Sensor
