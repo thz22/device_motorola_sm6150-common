@@ -233,8 +233,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     av.offload.enable=true \
     ro.media.recorder-max-base-layer-fps=60 \
-    vendor.swvdec.log.level=0 \
-    vendor.vidc.debug.level=0
+    vendor.swvdec.log.level=1 \
+    vendor.vidc.debug.level=1
 
 PRODUCT_PRODUCT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
