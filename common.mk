@@ -265,10 +265,6 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # Reduce SystemServer Debug
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
-# Updater
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.recovery_update=false
-
 # Mobile data
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false
@@ -276,6 +272,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
+    SystemUIGoogle \    
     SystemUI \
     Settings
 
