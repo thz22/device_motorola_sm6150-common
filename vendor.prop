@@ -15,11 +15,3 @@ persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Disable Async MTE
 arm64.memtag.process.system_server=off
-
-# Disable CPU vsync
-debug.cpurend.vsync=false
-
-# SkiaGL Threaded
-debug.renderengine.backend=skiaglthreaded
-debug.hwui.renderer=skiagl
-renderthread.skia.reduceopstasksplitting=true 
