@@ -226,18 +226,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
 
-# LMKd
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.thrashing_limit=200 \
-    ro.lmk.swap_free_low_percentage=10 \
-    ro.lmk.psi_partial_stall_ms=120 \
-    ro.lmk.swap_util_max=100 \
-    ro.lmk.threshold_decay=30 \
-    ro.lmk.thrashing_limit_decay=50 \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.downgrade_pressure=60
-
 # Logs
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.log.tag.OpenGLRenderer=S \
@@ -262,7 +250,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=8
+    ro.vendor.qti.sys.fw.bservice_limit=15
 
 # Netflix
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -285,7 +273,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.vendor.qti.sys.fw.bg_apps_limit=11
+    ro.vendor.qti.sys.fw.bg_apps_limit=20
 
 # Qualcomm System Daemon
 PRODUCT_PROPERTY_OVERRIDES += \
